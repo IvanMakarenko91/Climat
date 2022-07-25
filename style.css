@@ -3,10 +3,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
-/* body {
-    position: relative;
-} */
+body {
+  position: relative;
+}
+/* Navbar */
+
 header span {
     color: #eea16d;
 }
@@ -16,7 +19,7 @@ header {
     justify-content: space-between;
     padding: 0 9%;
     height: 80px;
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(88, 88, 88,0);
 }
 header .logo {
     color: rgb(255, 255, 255);
@@ -44,7 +47,7 @@ header .menu li a {
     position: relative;
     transition: 0.5s;
 }
-header .menu li a:hover {
+header .menu li a:hover, header .menu li:nth-child(1) a {
     color: #fff;
     font-size: 18px;
 }
@@ -117,7 +120,7 @@ header .menu li a:hover::before {
       top: 0;
       left: 0;
       background-color: #191513;
-      height: 100%;
+      height: 100vh;
       width: 100%;
       display: flex;
       align-items: center;
@@ -127,4 +130,46 @@ header .menu li a:hover::before {
   header .menu.responsive li {
       margin: 25px 0;
   }
+}
+
+/* Principale */
+
+.tortue {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+.principale {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  z-index: -1;
+}
+
+.principale h2 {
+  position: absolute; 
+  top: 100px;
+  left: 100px; 
+  color: bisque;
+  font-size: 36px;
+  background: linear-gradient(to left, #80580d, #b8ac45);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transform: rotate(5deg);
+}
+.principale div {
+  position: absolute; 
+  top: 200px;
+  left: 100px; 
+  color: white;
+  font-size: 24px;
+}
+
+.principale img {
+  right: 0;
 }
