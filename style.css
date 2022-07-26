@@ -66,7 +66,7 @@ header .menu li a:hover::before {
     width:100%;
 }
 
-/*Responsive*/
+/* Responsive Navbar */
 
 @media (max-width:909px) {
   header {
@@ -162,7 +162,7 @@ header .menu li a:hover::before {
   top: 100px;
   left: 100px; 
   color: bisque;
-  font-size: 36px;
+  font-size: 30px;
   background: linear-gradient(to left, #80580d, #b8ac45);
   padding: 10px 20px;
   border-radius: 5px;
@@ -181,4 +181,31 @@ header .menu li a:hover::before {
   height: 300px;
   position: absolute;
   bottom: 50px;
+}
+
+/* Responsive principale */
+
+@media (max-width:909px) {
+  .principale h2 {
+    top: 50px;
+    left: 50px;
+    font-size: 20px;
+  }
+  .principale div {
+    top: 120px;
+    left: 50px;
+    font-size: 16px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width:450px) {
+  .principale h2 {
+    top: 20px;
+    left: 20px;
+  }
+  .principale div {
+    left: 20px;
+    top: 90px;
+  }
 }
