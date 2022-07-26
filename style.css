@@ -183,7 +183,7 @@ header .menu li a:hover::before {
   left: 100px; 
   color: white;
   font-size: 24px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .principale img {
@@ -263,10 +263,58 @@ header .menu li a:hover::before {
   display: flex;
 }
 
+.boutton-centrer {
+  display: flex;
+  justify-content: center;
+}
+
+.boutton-centrer a {
+  text-decoration: none;
+  color: white;
+}
+
+.boutton-centrer button:hover {
+  background-color: rgb(221, 48, 48) ;
+}
+
 @media (max-width:450px) {
   .agir {
     padding: 30px;
   }
+}
+
+
+/* Don */
+
+.don {
+  background-image: url('./images/cadres-accueil/black.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  min-height: 30vh;
+  padding: 70px;
+  color: white;
+}
+
+.don button, .boutton-centrer button {
+  border: 1px solid white;
+  padding: 15px;
+  background-color: rgb(184, 16, 16);
+  transition: 0.5s;
+}
+
+.don button:hover {
+  color: rgb(184, 16, 16);
+  background-color: white;
+}
+
+.don h2, .don h3 {
+  font-size: 30px;
+}
+
+.don p {
+  font-size: 18px;
 }
 
 /* Footer */
