@@ -209,3 +209,81 @@ header .menu li a:hover::before {
     top: 90px;
   }
 }
+
+
+/* Footer */
+
+footer {
+  background-image: url('./images/back-footer.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 30vh;
+  padding: 70px;
+}
+
+footer .container {
+  margin: auto;
+}
+footer ul {
+  list-style: none;
+}
+
+footer h4 {
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+footer h4::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  background-color: rgb(216, 152, 68);
+  height: 2px;
+  box-sizing: border-box;
+  width: 40px;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+footer ul li a:hover{
+  color: white;
+  padding-left: 8px;
+  text-decoration: none;
+}
+
+.social a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin-right: 10px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5 ease;
+}
+.social a:hover{
+  color: #24262b;
+  background-color: white;
+}
