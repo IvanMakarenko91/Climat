@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +10,12 @@
 body {
   position: relative;
 }
+
+h2 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+
 /* Navbar */
 
 header span {
@@ -132,6 +140,7 @@ header .menu li a:hover::before {
   }
 }
 
+
 /* Principale */
 
 .tortue {
@@ -174,6 +183,7 @@ header .menu li a:hover::before {
   left: 100px; 
   color: white;
   font-size: 24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .principale img {
@@ -210,6 +220,54 @@ header .menu li a:hover::before {
   }
 }
 
+
+/* Agir */
+
+.agir {
+  padding: 70px;  
+}
+
+.agir div {
+  font-family: 'Roboto', sans-serif;
+}
+
+.agir h2 {
+  text-align: center;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.agir h2::before {
+  content: "";
+  height: 5px;
+  width: 100px;
+  background-color: rgb(184, 16, 16);
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.agir img {
+  height: 90px;
+  width: 90px;
+}
+
+.agir h3 {
+  color: rgb(184, 16, 16);
+}
+
+.ligne {
+  display: flex;
+}
+
+@media (max-width:450px) {
+  .agir {
+    padding: 30px;
+  }
+}
 
 /* Footer */
 
