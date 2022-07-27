@@ -9,6 +9,7 @@
 }
 body {
   position: relative;
+  background-color: rgb(247, 247, 247);
 }
 
 h1, h2 {
@@ -168,6 +169,145 @@ header .menu li a:hover::before {
 }
 
 
+/* Contenu */
+
+.contenu p {
+  font-size: 19px;
+}
+
+.contenu button {
+  border: 1px solid white;
+  padding: 15px;
+  background-color: rgb(184, 16, 16);
+  transition: 0.5s;
+}
+
+.contenu button:hover {
+  background-color: rgb(236, 236, 236);
+  border: 1px solid black;
+}
+
+.contenu button a {
+  text-decoration: none;
+  color: white;
+}
+
+.contenu button:hover a {
+  color: rgb(184, 16, 16);
+}
+
+.contenu h2 {
+  position: relative;
+}
+
+.contenu h2::before {
+  position: absolute;
+  bottom: -15px;
+  content: "";
+  width: 100px;
+  height: 3px;
+  border-radius: 6px;
+  transition: 0.5s;
+  background-color: #000000;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.contenu img {
+  height: 90px;
+  width: 90px;
+}
+
+.energie {
+  background-image: url('./images/Causes/energie.jpg');
+}
+
+.consommation {
+  background-image: url("./images/Causes/consommation.jpg");
+}
+
+.agricole {
+  background-image: url("./images/Causes/agricole.jpg");
+}
+
+.deforestation {
+  background-image: url("./images/Causes/deforestation.jpg");
+}
+
+.energie, .consommation, .agricole, .deforestation {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 50%;
+  min-height: 50vh;
+}
+
+.vehicule, .production {
+  min-height: 50vh;
+  position: relative;
+}
+
+.vehicule::before {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./images/Causes/avion.jpg");
+  position: absolute;
+  content: "";
+  background-position: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.production::before {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./images/Causes/nuclear.jpg");
+  position: absolute;
+  content: "";
+  background-position: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+
+.centrer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(218, 218, 218)
+}
+
+.centrer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(238, 238, 238);
+}
+
+.centrer3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+@media (max-width:991px) {
+  .energie, .consommation, .agricole, .deforestation {
+    width: 100%;
+  }
+  .vehicule::before {
+    opacity: 0.6;
+  }
+}
 
 
 
