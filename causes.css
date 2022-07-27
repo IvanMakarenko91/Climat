@@ -27,7 +27,7 @@ header {
     justify-content: space-between;
     padding: 0 9%;
     height: 80px;
-    background-color: rgb(88, 88, 88,0);
+    background-color: rgb(88, 88, 88);
 }
 header .logo {
     color: rgb(255, 255, 255);
@@ -46,7 +46,7 @@ header .menu {
     margin: 0;
 }
 header .menu li {
-    margin: 0 15px;
+    margin: 0px 15px;
     list-style: none;
 }
 header .menu li a {
@@ -56,7 +56,7 @@ header .menu li a {
     position: relative;
     transition: 0.5s;
 }
-header .menu li a:hover, header .menu li:nth-child(1) a {
+header .menu li a:hover, header .menu li:nth-child(2) a {
     color: #fff;
     font-size: 18px;
 }
@@ -142,259 +142,10 @@ header .menu li a:hover::before {
 }
 
 
-/* Principale */
-
-.tortue {
-  position: absolute;
-  object-fit: cover;
-  width: 100%;
-  top: 0;
-  height: 100vh;
-  z-index: -1;
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.tortue.activer {
-  opacity: 1;
-}
-
-.principale {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 80px);
-  display: flex;
-  z-index: -1;
-}
-
-.principale h2 {
-  position: absolute; 
-  top: 100px;
-  left: 100px; 
-  color: bisque;
-  font-size: 30px;
-  background: linear-gradient(to left, #80580d, #b8ac45);
-  padding: 10px 20px;
-  border-radius: 5px;
-  transform: rotate(5deg);
-}
-.principale div {
-  position: absolute; 
-  top: 200px;
-  left: 100px; 
-  color: white;
-  font-size: 24px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.principale img {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  bottom: 50px;
-}
-
-/* Responsive principale */
-
-@media (max-width:909px) {
-  .principale h2 {
-    top: 50px;
-    left: 50px;
-    font-size: 20px;
-  }
-  .principale div {
-    top: 120px;
-    left: 50px;
-    font-size: 16px;
-    padding-right: 20px;
-  }
-}
-
-@media (max-width:450px) {
-  .principale h2 {
-    top: 20px;
-    left: 20px;
-  }
-  .principale div {
-    left: 20px;
-    top: 90px;
-  }
-}
 
 
-/* Agir */
-
-.agir {
-  padding: 70px;  
-}
-
-.agir div {
-  font-family: 'Roboto', sans-serif;
-}
-
-.agir h2 {
-  text-align: center;
-  position: relative;
-  margin-bottom: 100px;
-}
-
-.agir h2::before {
-  content: "";
-  height: 5px;
-  width: 100px;
-  background-color: rgb(184, 16, 16);
-  position: absolute;
-  left: 50%;
-  bottom: -30px;
-  border-radius: 5px;
-  transform: translateX(-50%);
-  box-sizing: border-box;
-}
-
-.agir img {
-  height: 90px;
-  width: 90px;
-}
-
-.agir h3 {
-  color: rgb(184, 16, 16);
-}
-
-.ligne {
-  display: flex;
-}
-
-.boutton-centrer {
-  display: flex;
-  justify-content: center;
-}
-
-.boutton-centrer a {
-  text-decoration: none;
-  color: white;
-}
-
-.boutton-centrer button:hover {
-  background-color: rgb(221, 48, 48) ;
-}
-
-@media (max-width:450px) {
-  .agir {
-    padding: 30px;
-  }
-}
 
 
-/* Don */
-
-.don {
-  background-image: url('./images/cadres-accueil/black.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  width: 100%;
-  min-height: 30vh;
-  padding: 70px;
-  color: white;
-}
-
-.don button, .boutton-centrer button {
-  border: 1px solid white;
-  padding: 15px;
-  background-color: rgb(184, 16, 16);
-  transition: 0.5s;
-}
-
-.don button:hover {
-  color: rgb(184, 16, 16);
-  background-color: white;
-}
-
-.don h2, .don h3 {
-  font-size: 30px;
-}
-
-.don p {
-  font-size: 18px;
-}
-
-
-/* Cadres */
-
-.profile-area {
-  padding: 70px;
-  background-image: url('./images/Accueil/cadre.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  width: 100%;
-  min-height: 30vh;
-  padding: 70px;
-}
-
-.card {
-  box-shadow: 0 0 30px rgba(0,0,0,0.5);
-  overflow: hidden;
-  border-radius: 15px;
-}
-
-.img1 img {
-  height: 200px;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  width: 100%;
-}
-
-.img2 img {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  z-index: 1;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 7px solid rgb(204, 0, 0);
-  margin-top: -80px;
-}
-
-.card:hover .img2 img {
-  border-color: darkcyan;
-  transition: 0.7s;
-}
-
-.main-text {
-  padding: 30px 0;
-  text-align: center;
-}
-
-.main-text h2 {
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 20px;
-  margin: 0 0 20px;
-}
-
-.main-text p {
-  font-size: 16px;
-  padding: 0 35px;
-}
-
-.avis {
-  position: relative;
-}
-
-.avis h2::before {
-  content: "";
-  height: 5px;
-  width: 100px;
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  left: 50%;
-  bottom: -20px;
-  border-radius: 5px;
-  transform: translateX(-50%);
-  box-sizing: border-box;
-}
 
 
 /* Footer */
