@@ -124,6 +124,7 @@ header .menu li a:hover::before {
       
   }
   header .menu.responsive {
+    padding: 0;
       display: flex;
       position: absolute;
       top: 0;
@@ -184,7 +185,7 @@ header .menu li a:hover::before {
   left: 100px; 
   color: white;
   font-size: 24px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .principale img {
