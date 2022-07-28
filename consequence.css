@@ -168,6 +168,130 @@ header .menu li a:hover::before {
   }
 }
 
+/* Consequences */
+
+.consequence {
+  padding: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./images/Consequences/backwhite.jpg");
+  background-position: 100%;
+
+}
+
+.consequence div {
+  font-family: 'Roboto', sans-serif;
+}
+
+.consequence h2 {
+  text-align: center;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.consequence h2::before {
+  content: "";
+  height: 5px;
+  width: 100px;
+  background-color: rgb(184, 16, 16);
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.consequence img {
+  height: 90px;
+  width: 90px;
+}
+
+.consequence h3 {
+  color: rgb(184, 16, 16);
+}
+
+.ligne {
+  display: flex;
+}
+
+@media (max-width:450px) {
+  .consequence {
+    padding: 30px;
+  }
+}
+
+
+/* Question */
+
+aside {
+  min-height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./images/Consequences/backred.jpg");
+  background-position: 100%;
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+aside img {
+  width: 60px;
+  height: 90px;
+}
+
+#btn-1, #btn-2, #btn-3 {
+  width: 100px;
+  border: none;
+  padding: 10px;
+  background-color: #bbbbbb;
+  border-radius: 5px;
+}
+
+#btn-1:hover, #btn-2:hover, #btn-3:hover {
+  background-color: #dfdfdf;
+}
+
+aside p {
+  opacity: 0;
+  transition: 0.6s;
+  transform: translateY(-500px);
+}
+
+.reponses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#reponse {
+  font-size: 18px;
+  background-color: green;
+  width: 300px;
+  border-radius: 20px;
+}
+
+#reponse2 {
+  font-size: 18px;
+  width: 600px;
+  background-color: rgba(0, 0, 0, 0.600);
+  border-radius: 10px;
+}
+
+.show-response {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width:650px) {
+  #reponse2 {
+    width: 90%;
+  }
+}
+
 
 /* Contenu */
 
