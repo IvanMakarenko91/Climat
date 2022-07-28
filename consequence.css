@@ -169,6 +169,60 @@ header .menu li a:hover::before {
 }
 
 
+/* Contenu */
+
+.contenu {
+  min-height: 70vh;
+}
+
+.contenu h2 {
+  font-weight: 600;
+}
+
+.vehicule {
+  min-height: 40vh;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./images/Causes/agricole.jpg");
+  background-position: 100%;
+  width: 600px;
+  margin-bottom: 300px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.centrer {
+  width: 500px;
+  position: absolute;
+  bottom: -210px;
+  background-color: rgba(255, 255, 255, 0.795);
+  left: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width:600px) {
+  .vehicule {
+    width: 96%;
+  }
+
+  .centrer {
+    width: 90%;
+    left: 5%;
+    bottom: -260px;
+    background-color: rgba(255, 255, 255, 0.900);
+  }
+
+  .centrer p {
+    font-size: 14px;
+  }
+}
+
+
+
 
 /* Footer */
 
