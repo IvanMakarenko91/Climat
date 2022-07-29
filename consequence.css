@@ -287,8 +287,14 @@ aside p {
 }
 
 @media (max-width:650px) {
+  #reponse {
+    width: 270px;
+  }
   #reponse2 {
     width: 90%;
+  }
+  #btn-1, #btn-2, #btn-3 {
+    width: 80px;
   }
 }
 
@@ -303,12 +309,35 @@ aside p {
   font-weight: 600;
 }
 
-.vehicule {
+.transport {
+  background-image: url("./images/Consequences/transport.jpg");
+}
+
+.agriculture {
+  background-image: url("./images/Consequences/agriculture.jpg");
+}
+
+.secheresse {
+  background-image: url("./images/Consequences/secheresse2.jpg");
+}
+
+.montee {
+  background-image: url("./images//Consequences/montee.jpg");
+}
+
+.biodiversite {
+  background-image: url("./images/Consequences/biodiversite.jpg");
+}
+
+.sante {
+  background-image: url("./images/Consequences/maladie.jpg");
+}
+
+.contenu-image {
   min-height: 40vh;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("./images/Causes/agricole.jpg");
   background-position: 100%;
   width: 600px;
   margin-bottom: 300px;
@@ -318,6 +347,7 @@ aside p {
 
 .centrer {
   width: 500px;
+  min-height: 350px;
   position: absolute;
   bottom: -210px;
   background-color: rgba(255, 255, 255, 0.795);
@@ -329,7 +359,7 @@ aside p {
 }
 
 @media (max-width:600px) {
-  .vehicule {
+  .contenu-image {
     width: 96%;
   }
 
