@@ -211,6 +211,7 @@ header .menu li a:hover::before {
 
 .choix {
   margin-bottom: 0;
+  color: rgb(184, 16, 16);
 }
 
 .quote-container {
@@ -258,6 +259,21 @@ header .menu li a:hover::before {
   background-color: #d4d3d3;
   visibility: visible;
   height: calc(100% - 70px);
+}
+
+.chartBox {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@media(max-width:500px) {
+  .chartBox {
+    width: 275px;
+    height: 275px;
+  }
 }
 
 

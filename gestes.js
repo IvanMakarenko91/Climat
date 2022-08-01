@@ -26,3 +26,85 @@ function enleverActiveImages() {
 }
 
 enleverActiveImages();
+
+
+// setup 
+const data = {
+  labels: ['Chauffage', 'Eau chaude', 'Froid', 'Lavage', 'Autres', 'Cuisson'],
+  datasets: [{
+    label: 'Weekly Sales',
+    data: [50, 17, 14, 8, 6, 5],
+    backgroundColor: [
+      'rgba(255, 26, 104, 1)',
+      'rgba(54, 162, 235, 1)',
+      'rgba(255, 206, 86, 1)',
+      'rgba(75, 192, 192, 1)',
+      'rgba(153, 102, 255, 1)',
+      'rgba(255, 159, 64, 1)'
+    ],
+    borderColor: [
+      'rgba(255, 26, 104, 1)',
+      'rgba(54, 162, 235, 1)',
+      'rgba(255, 206, 86, 1)',
+      'rgba(75, 192, 192, 1)',
+      'rgba(153, 102, 255, 1)',
+      'rgba(255, 159, 64, 1)'
+    ],
+    hoverOffset: 10,
+    borderWidth: 1,
+    cutout: '70%',
+    rotation: 45
+  }]
+};
+
+// hoverLabel
+const hoverLabel = {
+  id: 'hoverLabel',
+  afterDraw(chart){
+    const {ctx, chartArea: {top, width, height}} = chart;
+    ctx.save();
+
+    if(chart._active.length > 0) {
+      const textLabel = chart.config.data.labels[chart._active[0].index];
+      const numberLabel = chart.config.data.datasets[chart._active[0].datasetIndex].data[chart._active[0].index];
+      const color = chart.config.data.datasets[chart._active[0].datasetIndex].borderColor[chart._active[0].index];
+
+      ctx.font = 'bolder 16px Arial';
+      ctx.fillStyle = color;
+      ctx.textAlign = 'center';
+      ctx.fillText(`${textLabel}: ${numberLabel}%`, width / 2, height / 2 + top);
+    }
+    ctx.restore();
+  }
+}
+
+// config 
+const config = {
+  type: 'doughnut',
+  data,
+  options: {
+    plugins: {
+      title: {
+          display: true,
+          text: 'Consommation en électricité des ménages francais',
+          font: {
+            size: 18
+          },
+          padding: {
+            bottom: 25
+          }
+      },
+      legend: {
+        display: true,
+        position: 'bottom'
+      }
+  }
+  },
+  plugins: [hoverLabel]
+};
+
+// render init block
+const myChart = new Chart(
+  document.getElementById('myChart'),
+  config
+);
