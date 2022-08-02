@@ -147,24 +147,67 @@ header .menu li a:hover::before {
 /* Principale */
 
 .principale {
-  padding: 70px;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  z-index: -1;
+  background: url("./images/Consequences/consequence.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 
+.principale h2 {
+  position: absolute; 
+  top: 100px;
+  left: 100px; 
+  color: bisque;
+  font-size: 30px;
+  background: linear-gradient(to left, #80580d, #b8ac45);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transform: rotate(5deg);
+}
 .principale div {
-  border: 2px solid black;
+  position: absolute; 
+  top: 200px;
+  left: 100px; 
+  color: white;
+  font-size: 24px;
+  font-family: 'Libre Baskerville', serif;
 }
 
-.principale p {
-  font-size: 19px;
+/* Responsive principale */
+
+@media (max-width:1800px) {
+  .principale div {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }
 
-@media (max-width:991px) {
-  .principale {
-    padding: 30px;
+@media (max-width:909px) {
+  .principale h2 {
+    top: 50px;
+    left: 50px;
+    font-size: 20px;
+  }
+  .principale div {
+    top: 120px;
+    left: 50px;
+    font-size: 16px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width:450px) {
+  .principale h2 {
+    top: 20px;
+    left: 20px;
+  }
+  .principale div {
+    left: 20px;
+    top: 90px;
   }
 }
 
@@ -356,6 +399,7 @@ aside p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-shadow: 3px 3px 5px black;
 }
 
 @media (max-width:600px) {

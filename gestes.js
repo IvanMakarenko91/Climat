@@ -35,7 +35,7 @@ const data = {
     label: 'Weekly Sales',
     data: [50, 17, 14, 8, 6, 5],
     backgroundColor: [
-      'rgba(255, 26, 104, 1)',
+      'rgba(180, 0, 0, 1)',
       'rgba(54, 162, 235, 1)',
       'rgba(255, 206, 86, 1)',
       'rgba(75, 192, 192, 1)',
@@ -43,7 +43,7 @@ const data = {
       'rgba(255, 159, 64, 1)'
     ],
     borderColor: [
-      'rgba(255, 26, 104, 1)',
+      'rgba(180, 0, 0, 1)',
       'rgba(54, 162, 235, 1)',
       'rgba(255, 206, 86, 1)',
       'rgba(75, 192, 192, 1)',
@@ -88,7 +88,7 @@ const config = {
           display: true,
           text: 'Consommation en électricité des ménages francais',
           font: {
-            size: 18
+            size: 20
           },
           padding: {
             bottom: 25
