@@ -75,9 +75,25 @@ header .menu li a:hover::before {
     width:100%;
 }
 
+header ul li:nth-child(5) a {
+  border: 1px solid white;
+  padding: 15px;
+  color: white;
+}
+
+header ul li:nth-child(5) a:hover {
+  color: rgb(184, 16, 16);
+  font-size: 17px;
+  background-color: white;
+}
+
+header .menu li:nth-child(5) a:hover::before {
+  width: 0%;
+}
+
 /* Responsive Navbar */
 
-@media (max-width:909px) {
+@media (max-width:1100px) {
   header {
       padding: 0 5%;
   }
