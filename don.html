@@ -34,14 +34,15 @@
   <!-- Don -->
 
   <main>
-    <div class="container-fluid mx-5">
-      <div class="row justify-content-around">
+    <div class="container-fluid mx-5 mt-5">
+      <div class="row justify-content-center">
         <div class="col-3 mon-don">
 
           <div class="row titre mb-4">
             <h5 class="m-0 py-3 text-center">MON DON</h5>
           </div>
           <div class="onglet-js">
+            
             <div class="row mb-4">
               <div class="choix">
                 <div class="onglets activer">DON UNIQUE</div>
@@ -158,6 +159,52 @@
           </div>
 
         </div>
+
+
+        <!-- Reglement -->
+
+        <div class="col-3 reglement">
+
+          <div class="row titre mb-4">
+            <h5 class="m-0 py-3 text-center">MON RÈGLEMENT</h5>
+          </div>
+
+          <div class="regler">
+            <div class="row justify-content-around">
+              <div class="col-6 text-center ">
+                <i class="fa-solid fa-credit-card"></i>
+                <p class="paiement paiement-activer">CARTE BANCAIRE</p>
+              </div>
+              <div class="col-6 text-center">
+                <i class="fa-brands fa-paypal"></i>
+                <p class="paiement">PAYPAL</p>
+              </div>
+            </div>
+
+            <div class="mon-reglement mon-reglement-activer">
+              <div class="row justify-content-center mb-4">
+                <input type="text" placeholder="N : 1234 2134 1234 1234" value="" id="cb" class="py-2"/>
+              </div>
+              <div class="row justify-content-between mx-1 mb-4">
+                <input type="text" placeholder="MM / AA" value="" id="date" class="py-2"/>
+                <input type="text" placeholder="CVC" value="" id="cvc" class="py-2"/>
+              </div>
+              <div class="row valider">
+                <button class="py-2 mb-5">Valider mon paiement</button>
+                <p class="text-center">Plateforme de paiement 100% sécurisé</p>
+              </div>
+            </div>
+
+            <div class="mon-reglement">
+              <div class="row valider">
+                <button class="py-2 mb-5">Valider mon paiement</button>
+                <p class="text-center">Plateforme de paiement 100% sécurisé</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
       </div>
     </div>
   </main>
