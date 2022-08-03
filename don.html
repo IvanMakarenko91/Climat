@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faire un don</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./don.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="./images/Accueil/tree.png" alt="three">
+      <h1><span>CC</span>MA</h1>
+    </div>
+    <!-- menu responsive -->
+    <div class="toggle-menu"></div>
+
+    <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="causes.html">Causes</a></li>
+        <li><a href="consequences.html">Conséquences</a></li>
+        <li><a href="gestes.html">Gestes</a></li>
+        <li><a href="don.html" target="_blank">Faire un don</a></li>
+    </ul>
+  </header>
+
+  <!-- Don -->
+
+  <main>
+    <div class="container-fluid">
+      <div class="row justify-content-around">
+        <div class="col-3 mon-don">
+
+          <div class="row titre mb-4">
+            <h5 class="m-0 py-3 text-center">MON DON</h5>
+          </div>
+          <div class="onglet-js">
+            <div class="row mb-4">
+              <div class="choix">
+                <div class="onglets activer">DON UNIQUE</div>
+                <div class="onglets">DON MENSUEL</div>
+              </div>
+            </div>
+
+            <div class="contenu activer-contenu">
+              <div class="row mb-3">
+                <div class="choix">
+                  <button class="px-3 py-2 button-color">50 €</button>
+                  <button class="px-3 py-2 button-color">90 €</button>
+                  <button class="px-3 py-2 button-color">100 €</button>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="choix">
+                  <button class="px-3 py-2 button-color">150 €</button>
+                  <button class="px-3 py-2 button-color">200 €</button>
+                  <button class="px-3 py-2 button-color">500 €</button>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="recherche">
+                  <input type="text" placeholder="Montant libre" value="" id="recherche" class="pl-2 py-1"/>
+                  <div class="euro">€</div>
+                </div>
+              </div>
+              <div class="row mx-2">
+                <p class="p-3">Votre don avec réduction fiscale ne vous coûte que 34% de sa somme (réduction à hauteur de 20% du revenu imposable).</p>
+              </div>
+            </div>
+
+            <div class="contenu">
+              <div class="row mb-3">
+                <div class="choix">
+                  <button class="px-3 py-2 button-color">10 €</button>
+                  <button class="px-3 py-2 button-color">20 €</button>
+                  <button class="px-3 py-2 button-color">30 €</button>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="choix">
+                  <button class="px-3 py-2 button-color">50 €</button>
+                  <button class="px-3 py-2 button-color">75 €</button>
+                  <button class="px-3 py-2 button-color">100 €</button>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="recherche">
+                  <input type="text" placeholder="Montant libre" value="" id="recherches" class="pl-2 py-1"/>
+                  <div class="euro">€</div>
+                </div>
+              </div>
+              <div class="row mx-2">
+                <p class="p-3">Votre don avec réduction fiscale ne vous coûte que 34% de sa somme (réduction à hauteur de 20% du revenu imposable).</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-xl-3 mb-4">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Faire un don</a></li>
+            <li><a href="#">Conséquences</a></li>
+            <li><a href="#">Gestes</a></li>
+            <li><a href="#">Causes</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-xl-3 mb-4">
+          <h4>Paramètres</h4>
+          <ul>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Politique de cookies</a></li>
+            <li><a href="#">Confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-xl-3 mb-4">
+          <h4>Nous contacter</h4>
+          <ul>
+            <li><a href="#">06 00 00 00 00</a></li>
+            <li><a href="#">ccma@gmail.com</a></li>
+            <li><a href="#">Besoin d'informations ?</a></li>
+            <li><a href="#">Faire une demande</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-xl-3 mb-4">
+          <h4>Nous suivre</h4>
+          <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="mt-2"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./don.js"></script>
+</body>
+</html>
