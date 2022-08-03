@@ -255,10 +255,109 @@ input {
   background-color: rgb(187, 187, 32);
 }
 
+@media (max-width:380px) {
+  .choix button {
+    width: 85px;
+  }
+}
 
+/* Coordonnées */
 
+.coordonnees {
+  height: 600px;
+  width: 350px;
+  background-color: rgb(235, 235, 235);
+  position: relative;
+}
 
+.payp p {
+  background-color: rgb(187, 187, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
+.payp p:hover {
+  background-color: rgb(207, 207, 13);
+}
+
+.paypal {
+  width: 20px;
+  height: 20px;
+}
+
+.coord {
+  font-size: 14px;
+  position: relative;
+}
+
+.coord::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 50px;
+  top: 50%;
+  left: 0;
+  background-color: black;
+}
+
+.coord::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 50px;
+  top: 50%;
+  right: 0;
+  background-color: black;
+}
+
+.mail {
+  background-color: rgb(200, 200, 200);
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mail {
+  width: 90%;
+}
+
+.i-mail {
+  width: 40px;
+  height: 20px;
+}
+
+.form-select {
+  width: 45%;
+  border-radius: 0px;
+}
+
+#prenom {
+  width: 45%;
+}
+
+.civil {
+  display: flex;
+  justify-content: space-between;
+}
+
+#nom, #adresse {
+  width: 94%;
+}
+
+.obligation {
+  font-size: 14px;
+}
+
+@media (max-width:380px) {
+  .coord::after, .coord::before {
+    width: 20px;
+  }
+}
 
 
 

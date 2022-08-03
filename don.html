@@ -34,7 +34,7 @@
   <!-- Don -->
 
   <main>
-    <div class="container-fluid">
+    <div class="container-fluid mx-5">
       <div class="row justify-content-around">
         <div class="col-3 mon-don">
 
@@ -92,7 +92,7 @@
               </div>
               <div class="row mb-4">
                 <div class="recherche">
-                  <input type="text" placeholder="Montant libre" value="" id="recherches" class="pl-2 py-1"/>
+                  <input type="text" placeholder="Montant libre" value="" id="recherches" class="py-1"/>
                   <div class="euro">€</div>
                 </div>
               </div>
@@ -102,6 +102,61 @@
             </div>
 
           </div>
+        </div>
+
+        <!-- Coordonnées -->
+
+        <div class="col-3 coordonnees mx-5">
+
+          <div class="row titre mb-4">
+            <h5 class="m-0 py-3 text-center">MES COORDONNÉES</h5>
+          </div>
+
+          <div class="row justify-content-center mb-3">
+            <div class="col-10">
+              <p class="text-center">Je me connecte et valide mon paiement en 1 clic.</p>
+            </div>
+            <div class="col-10 text-center payp">
+              <p class="py-2"><img src="./images/Don/paypal.png" alt="" class="paypal"><i>Paypal</i></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="coord">ou je saisis mes cooronnées</p>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="recherche">
+              <div class="mail"><img alt="" src="./images/Don/mail.png" class="i-mail"></div>
+              <input type="text" placeholder="Email *" value="" id="mail" class="py-2"/>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="civil">
+                <select class="form-select py-2" name="civilite" id="civilite">
+                  <option selected disabled value="">Civilité *</option>
+                  <option>Monsieur</option>
+                  <option>Madame</option>
+                </select>
+                <input type="text" placeholder="Prénom *" value="" id="prenom" class="py-2"/>
+            </div>
+          </div>
+
+          <div class="row justify-content-center mb-4">
+            <input type="text" placeholder="Nom *" value="" id="nom" class="py-2"/>
+          </div>
+
+          <div class="row justify-content-center mb-4">
+            <input type="text" placeholder="Adresse *" value="" id="adresse" class="py-2"/>
+          </div>
+
+          <div class="row">
+            <p class="obligation ms-1">* Champs obligatoires (indispensables pour votre réduction fiscale)</p>
+          </div>
+
         </div>
       </div>
     </div>
