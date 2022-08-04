@@ -63,6 +63,69 @@ function payarAnimation(e){
 // Button color
 
 const button = Array.from(document.querySelectorAll(".button-color")); 
+let prix1 = document.querySelector("#prix1");
+let prix2 = document.querySelector("#prix2");
+
+let testons = [
+  {
+    message: 50
+  },
+  {
+    message: 90
+  },
+  {
+    message: 100
+  },
+  {
+    message: 150
+  },
+  {
+    message: 200
+  },
+  {
+    message: 500
+  },
+  {
+    message: 10
+  },
+  {
+    message: 20
+  },
+  {
+    message: 30
+  },
+  {
+    message: 50
+  },
+  {
+    message: 75
+  },
+  {
+    message: 100
+  },
+]
+
+let fleche = button.length;
+
+function afficherPrix() {
+  for(let i = 0; i < fleche - 6; i++) {
+    button[i].addEventListener('click', () => {
+      prix1.style.color = '#00cd00';
+      prix1.innerText = `Vous ne payez que ${(testons[i].message / 3).toFixed(2)}€ à la place de ${testons[i].message}€ après déduction.`;
+      prix2.innerHTML = "";
+    })
+  }
+  for(let j = 6; j < fleche; j++) {
+    button[j].addEventListener('click', () => {
+      prix2.style.color = '#00cd00';
+      prix2.innerText = `Vous ne payez que ${(testons[j].message / 3).toFixed(2)}€ à la place de ${testons[j].message}€ après déduction.`;
+      prix1.innerHTML = "";
+    })
+  }
+}
+
+afficherPrix();
+
 
 button.forEach(buttons => {
    buttons.addEventListener("click", buttonAnimation)
@@ -74,6 +137,5 @@ function buttonAnimation(e){
     const el = e.target;
     button[nb].classList.remove("button-active");
     nb = button.indexOf(el);
-    button[nb].classList.add("button-active")
-    
+    button[nb].classList.add("button-active");
 }
