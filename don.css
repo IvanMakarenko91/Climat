@@ -28,6 +28,7 @@ header {
     padding: 0 9%;
     height: 80px;
     background-color: rgb(88, 88, 88);
+    display: none;
 }
 header .logo {
     color: rgb(255, 255, 255);
@@ -89,6 +90,21 @@ header ul li:nth-child(5) a:hover {
 
 header .menu li:nth-child(5) a:hover::before {
   width: 0%;
+}
+
+.ccma {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 3vh;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+}
+
+.ccma img {
+  height: 100px;
+  width: 100px;
 }
 
 /* Responsive Navbar */
@@ -173,7 +189,7 @@ main {
 }
 
 .mon-don {
-  height: 500px;
+  height: 480px;
   width: 350px;
   background-color: rgb(235, 235, 235);
 }
@@ -422,6 +438,43 @@ input {
 .mon-reglement-activer {
   display: flex;
   flex-direction: column;
+}
+
+.icone-paiement {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.icone-paiement i:hover {
+  color: rgb(187, 187, 32);
+}
+
+/* Responsive page */
+
+@media (max-width:891px) {
+  .coordonnees {
+    margin: 40px 0px;
+  }
+  .mon-don {
+    margin-top: 100px
+  }
+}
+
+@media (min-width:892px) and (max-width:1258px) {
+  .coordonnees {
+    margin-bottom: 50px;
+  }
+
+  .coordonnees, .mon-don {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width:1242px) and (max-width:1258px) {
+  .reglement {
+    margin-top: 100px;
+  }
 }
 
 
