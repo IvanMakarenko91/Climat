@@ -60,11 +60,13 @@ function payarAnimation(e){
 }
 
 
-// Button color
+// Afficher le prix au clic et input
 
 const button = Array.from(document.querySelectorAll(".button-color")); 
 let prix1 = document.querySelector("#prix1");
 let prix2 = document.querySelector("#prix2");
+let libres = document.getElementById('recherches');
+let libre = document.getElementById('recherche');
 
 let testons = [
   {
@@ -102,7 +104,7 @@ let testons = [
   },
   {
     message: 100
-  },
+  }
 ]
 
 let fleche = button.length;
@@ -113,6 +115,17 @@ function afficherPrix() {
       prix1.style.color = '#00cd00';
       prix1.innerText = `Vous ne payez que ${(testons[i].message / 3).toFixed(2)}€ à la place de ${testons[i].message}€ après déduction.`;
       prix2.innerHTML = "";
+      libre.value = "";
+    })
+    libre.addEventListener('input', () => {
+      prix1.style.color = '#00cd00';
+      button[i].classList.remove("button-active");
+      prix1.innerText = `Vous ne payez que ${(libre.value / 3).toFixed(2)}€ à la place de ${libre.value}€ après déduction.`;
+      prix2.innerHTML = "";
+      libres.value = "";
+      if(!Number(libre.value)) {
+        prix1.innerText = "Sélectionnez ou saisissez un montant."
+      }
     })
   }
   for(let j = 6; j < fleche; j++) {
@@ -120,12 +133,26 @@ function afficherPrix() {
       prix2.style.color = '#00cd00';
       prix2.innerText = `Vous ne payez que ${(testons[j].message / 3).toFixed(2)}€ à la place de ${testons[j].message}€ après déduction.`;
       prix1.innerHTML = "";
+      libres.value = "";
+    })
+    libres.addEventListener('input', () => {
+      prix2.style.color = '#00cd00';
+      button[j].classList.remove("button-active");
+      prix2.innerText = `Vous ne payez que ${(libres.value / 3).toFixed(2)}€ à la place de ${libres.value}€ après déduction.`;
+      prix1.innerHTML = "";
+      libre.value = "";
+      if(!Number(libres.value)) {
+        prix2.innerText = "Sélectionnez ou saisissez un montant."
+      }
     })
   }
 }
 
 afficherPrix();
 
+
+
+// Afficher la couleur du boutton 
 
 button.forEach(buttons => {
    buttons.addEventListener("click", buttonAnimation)
