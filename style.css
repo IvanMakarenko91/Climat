@@ -323,8 +323,17 @@ header .menu li:nth-child(5) a:hover::before {
   transition: 0.5s;
 }
 
-.don button:hover {
+.don a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+.don button:hover a {
   color: rgb(184, 16, 16);
+}
+
+.don button:hover {
   background-color: white;
 }
 

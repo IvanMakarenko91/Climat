@@ -381,6 +381,11 @@ body > section.container.action > div.pt-5.action-title > h2 {
   transition: all 0.5s;
 }
 
+.soutenir a {
+  text-decoration: none;
+  color: white
+}
+
 .soutenir:hover {
   background-color: black;
 }
