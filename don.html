@@ -134,11 +134,17 @@
             </div>
           </div>
 
+          <form id="formulaire">
+            
           <div class="row mb-4">
             <div class="recherche">
               <div class="mail"><img alt="" src="./images/Don/mail.png" class="i-mail"></div>
-              <input type="text" placeholder="Email *" value="" id="mail" class="py-2"/>
+              <input type="text" placeholder="Email *" value="" id="mail" class="py-2" name="email"/>
+              <div class="invalid-feedback ms-2">
+                Veuillez saisir votre e-mail.
+              </div>
             </div>
+            <span id="error-mail"></span>
           </div>
 
           <div class="row mb-4">
@@ -148,16 +154,25 @@
                   <option>Monsieur</option>
                   <option>Madame</option>
                 </select>
-                <input type="text" placeholder="Prénom *" value="" id="prenom" class="py-2"/>
+                <div class="invalid-feedback ms-2">
+                  Veuillez choisir la civilité.
+                </div>
+                <input type="text" placeholder="Prénom *" value="" id="prenom" class="py-2" name="firstName"/>
+                <div class="invalid-feedback ms-2">
+                  Veuillez saisir votre prénom.
+                </div>
             </div>
           </div>
 
           <div class="row justify-content-center mb-4">
-            <input type="text" placeholder="Nom *" value="" id="nom" class="py-2"/>
+            <input type="text" placeholder="Nom *" value="" id="nom" class="py-2" name="lastName"/>
+            <div class="invalid-feedback">
+              Veuillez saisir votre nom.
+            </div>
           </div>
 
-          <div class="row justify-content-center mb-4">
-            <input type="text" placeholder="Adresse *" value="" id="adresse" class="py-2"/>
+          <div class="row justify-content-center mb-1">
+            <input type="text" placeholder="Adresse" value="" id="adresse" class="py-2"/>
           </div>
 
           <div class="row">
@@ -189,18 +204,28 @@
 
             <div class="mon-reglement mon-reglement-activer">
               <div class="row justify-content-center mb-4">
-                <input type="text" placeholder="N : 1234 2134 1234 1234" value="" id="cb" class="py-2"/>
+                <input type="text" placeholder="N : 1234 2134 1234 1234" value="" id="cb" class="py-2" name="cb"/>
+                <div class="invalid-feedback ms-3">
+                  Saisissez un numéro valide.
+                </div>
               </div>
               <div class="row justify-content-between mx-1 mb-4">
-                <input type="text" placeholder="MM / AA" value="" id="date" class="py-2"/>
-                <input type="text" placeholder="CVC" value="" id="cvc" class="py-2"/>
+                <input type="text" placeholder="MM / AA" value="" id="date" class="py-2" name="expiration"/>
+                <div class="invalid-feedback ms-0 mb-3">
+                  Expiration CB.
+                </div>
+                <input type="text" placeholder="CVC" value="" id="cvc" class="py-2" name="cvc"/>
+                <div class="invalid-feedback ms-0">
+                  CVC à saisir.
+                </div>
               </div>
+              
               <div class="row valider">
-                <button class="py-2 mb-5">Valider mon paiement</button>
-                <p class="text-center">Plateforme de paiement 100% sécurisé</p>
+                <button class="py-2 mb-1" type="submit">Valider mon paiement</button>
+                <p class="text-center" id="plateforme">Plateforme de paiement 100% sécurisé</p>
               </div>
             </div>
-
+            </form>
             <div class="mon-reglement">
               <div class="row valider">
                 <button class="py-2 mt-4 mb-5">Valider mon paiement</button>
