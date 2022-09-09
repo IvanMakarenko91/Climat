@@ -332,6 +332,7 @@ input {
 .mail {
   background-color: rgb(200, 200, 200);
   width: 50px;
+  height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -353,11 +354,16 @@ input {
 
 #prenom {
   width: 45%;
+  text-transform: capitalize;
 }
 
 .civil {
   display: flex;
   justify-content: space-between;
+}
+
+#nom {
+  text-transform: capitalize;
 }
 
 #nom, #adresse {

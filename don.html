@@ -79,7 +79,7 @@
               </div>
               <div class="row mb-4">
                 <div class="recherche">
-                  <input type="text" placeholder="Montant libre" value="" id="recherche" class="pl-2 py-1"/>
+                  <input type="text" placeholder="Montant libre" value="" id="recherche" class="pl-2 py-1" onkeypress="return isNumberKey(event)" maxlength="3"/>
                   <div class="euro">€</div>
                 </div>
               </div>
@@ -105,7 +105,7 @@
               </div>
               <div class="row mb-4">
                 <div class="recherche">
-                  <input type="text" placeholder="Montant libre" value="" id="recherches" class="py-1"/>
+                  <input type="text" placeholder="Montant libre" value="" id="recherches" class="py-1" onkeypress="return isNumberKey(event)" maxlength="3"/>
                   <div class="euro">€</div>
                 </div>
               </div>
@@ -145,10 +145,10 @@
           <div class="row mb-4">
             <div class="recherche">
               <div class="mail"><img alt="" src="./images/Don/mail.png" class="i-mail"></div>
-              <input type="text" placeholder="Email *" value="" id="mail" class="py-2" name="email"/>
-              <div class="invalid-feedback ms-2">
-                Veuillez saisir votre e-mail.
-              </div>
+                <input type="text" placeholder="Email *" value="" id="mail" class="py-2" name="email"/>
+                <div class="invalid-feedback ms-2">
+                  Veuillez saisir votre e-mail.
+                </div>
             </div>
             <span id="error-mail"></span>
           </div>
@@ -210,18 +210,18 @@
 
             <div class="mon-reglement mon-reglement-activer">
               <div class="row justify-content-center mb-4">
-                <input type="text" placeholder="N : 1234 2134 1234 1234" value="" id="cb" class="py-2" name="cb"/>
+                <input type="text" placeholder="N : 1234 2134 1234 1234" value="" id="cb" class="py-2" name="cb" onkeypress="return isNumberKey(event)" maxlength="16"/>
                 <div class="invalid-feedback ms-3">
                   Saisissez un numéro valide.
                 </div>
               </div>
               <div class="row justify-content-between mx-1 mb-4">
-                <input type="text" placeholder="MM / AA" value="" id="date" class="py-2" name="expiration"/>
-                <div class="invalid-feedback ms-0 mb-3">
-                  Expiration CB.
+                <input type="text" placeholder="MM / AA" value="" id="date" class="py-2" name="expiration" maxlength="5" onkeyup="modifyInput(this)"/>
+                <div class="invalid-feedback ms-0 mb-3 ps-1">
+                  Le mois est compris entre 01 et 12.
                 </div>
-                <input type="text" placeholder="CVC" value="" id="cvc" class="py-2" name="cvc"/>
-                <div class="invalid-feedback ms-0">
+                <input type="text" placeholder="CVC" value="" id="cvc" class="py-2" name="cvc" onkeypress="return isNumberKey(event)" maxlength="3"/>
+                <div class="invalid-feedback ms-0 ps-1">
                   CVC à saisir.
                 </div>
               </div>

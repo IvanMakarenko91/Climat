@@ -68,7 +68,7 @@ let prix2 = document.querySelector("#prix2");
 let libres = document.getElementById('recherches');
 let libre = document.getElementById('recherche');
 
-let testons = [
+let mess = [
   {
     message: 50
   },
@@ -113,7 +113,7 @@ function afficherPrix() {
   for(let i = 0; i < fleche - 6; i++) {
     button[i].addEventListener('click', () => {
       prix1.style.color = '#00cd00';
-      prix1.innerText = `Vous ne payez que ${(testons[i].message / 3).toFixed(2)}€ à la place de ${testons[i].message}€ après déduction.`;
+      prix1.innerText = `Vous ne payez que ${(mess[i].message / 3).toFixed(2)}€ à la place de ${mess[i].message}€ après déduction.`;
       prix2.innerHTML = "";
       libre.value = "";
     })
@@ -124,6 +124,7 @@ function afficherPrix() {
       prix2.innerHTML = "";
       libres.value = "";
       if(!Number(libre.value)) {
+        prix1.style.color = "red";
         prix1.innerText = "Sélectionnez ou saisissez un montant."
       }
     })
@@ -131,7 +132,7 @@ function afficherPrix() {
   for(let j = 6; j < fleche; j++) {
     button[j].addEventListener('click', () => {
       prix2.style.color = '#00cd00';
-      prix2.innerText = `Vous ne payez que ${(testons[j].message / 3).toFixed(2)}€ à la place de ${testons[j].message}€ après déduction.`;
+      prix2.innerText = `Vous ne payez que ${(mess[j].message / 3).toFixed(2)}€ à la place de ${mess[j].message}€ après déduction.`;
       prix1.innerHTML = "";
       libres.value = "";
     })
@@ -142,6 +143,7 @@ function afficherPrix() {
       prix1.innerHTML = "";
       libre.value = "";
       if(!Number(libres.value)) {
+        prix2.style.color = "red";
         prix2.innerText = "Sélectionnez ou saisissez un montant."
       }
     })
@@ -149,6 +151,27 @@ function afficherPrix() {
 }
 
 afficherPrix();
+
+function modifyInput(ele) {
+  if (ele.value.length === 2) {
+    ele.value = ele.value + '/'
+  } 
+  else if (ele.value.length === 3 && ele.value.charAt(2) === '/') {
+    ele.value = ele.value.replace('/', '');
+  }
+}
+
+// Uniquement des nombres à l'appui
+
+function isNumberKey(evt)
+{
+	var charCode = (evt.which) ? evt.which : evt.keyCode
+	if (charCode > 31 && (charCode < 48 || charCode > 57))
+	return false;
+
+	return true;
+}
+
 
 
 
@@ -177,7 +200,7 @@ function buttonAnimation(e){
       
       Array.from(form.elements).forEach((input) => { 
           if (input.type !== "submit") { 
-              if (!validateFields(input) & (prix1.value || prix2.value !== "")) { 
+              if (!validateFields(input) & (prix1.style.color != "#00cd00" || prix2.style.color !== "#00cd00")) { 
                   
                   event.preventDefault();
                   event.stopPropagation();
